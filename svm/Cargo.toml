@@ -11,6 +11,8 @@ edition = { workspace = true }
 
 [dependencies]
 ahash = { workspace = true }
+criterion = { workspace = true }
+dashmap = { workspace = true }
 itertools = { workspace = true }
 log = { workspace = true }
 percentage = { workspace = true }
@@ -71,7 +73,9 @@ prost = { workspace = true }
 rand0-7 = { workspace = true }
 shuttle = { workspace = true }
 solana-clock = { workspace = true }
-solana-compute-budget = { workspace = true, features = ["dev-context-only-utils"] }
+solana-compute-budget = { workspace = true, features = [
+    "dev-context-only-utils",
+] }
 solana-compute-budget-interface = { workspace = true }
 solana-compute-budget-program = { workspace = true }
 solana-ed25519-program = { workspace = true }
@@ -118,3 +122,7 @@ shuttle-test = [
 
 [lints]
 workspace = true
+
+[[bench]]
+name = "account_overrides_bench"
+harness = false

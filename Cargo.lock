@@ -9814,6 +9814,8 @@ dependencies = [
  "ahash 0.8.11",
  "assert_matches",
  "bincode",
+ "criterion",
+ "dashmap",
  "ed25519-dalek",
  "itertools 0.12.1",
  "lazy_static",
